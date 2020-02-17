@@ -22,18 +22,24 @@
 	padding:5px;
 	background-color:red;
 }
+
+#body .content .todo{
+		margin-left:30px;
+}
 #body .content{
-	margin-left:30px;
 	display:flex;
 	flex-direction:row;
 }
 .todo, .doing, .done{
-	margin:150px;
+	
 }
-.done{
-	margin:150px;
+.content .attr-name{
+	width:250px; 
+	height:35px;
+	padding:10px;
+	font-size:13px;
+	background-color: blue;
 }
-
 </style>
 </head>
 <header id="head">
@@ -41,33 +47,29 @@
 	<form action="">새로운 TODO등록</form>
 </header>
 <body id="body">
-<div class="content">
-	<div class="todo">
-			<div>TODO</div>
+	<div class="content">
+		<div class="todo">
+			<div class="attr-name">TODO</div>
 			<ul>
 				<!--동적 요소 생성 부분-->
 
 			</ul>
+		</div>
+		<div class="doing">
+			<div class="attr-name">DOING</div>
+			<ul>
+					<!--동적 요소 생성 부분-->
+
+			</ul>
+		</div>
+		<div class="done">	<!-- Problem position-->
+			<div class="attr-name">DONE</div>
+			<ul>
+					<!--동적 요소 생성 부분-->
+
+			</ul>
+		</div>
 	</div>
-
-	<div class="doing">
-		<div>DOING</div>
-		<ul>
-				<!--동적 요소 생성 부분-->
-
-		</ul>
-	</div>
-
-	<div class="done">	<!-- Problem position-->
-		<div>DONE</div>
-		<ul>
-				<!--동적 요소 생성 부분-->
-
-		</ul>
-	</div>
-
-</div>
-
 </body>
 </html
 
