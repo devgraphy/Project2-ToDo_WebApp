@@ -1,0 +1,82 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!--모두 작성한 다음에 jstl, el로 변환-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#head{
+	padding:40px;
+	display:flex;
+	flex-direction:row;	/*자식 요소 수평 배치*/
+}
+#head h1{
+	margin:5px;
+	/*글자 회전*/
+	-ms-transform: rotate(-35deg);
+	-webkit-transform:rotate(-35deg);
+	transform:rotate(-35deg);
+	
+
+}
+#head form{
+	position:absolute;
+	right:30px;
+	padding:5px;
+	background-color:#00BFFF;
+}
+
+#body .content .todo{
+		margin-left:110px;
+}
+#body .content{
+	display:flex;
+	flex-direction:row;
+}
+.todo, .doing, .done{
+	margin:4px;
+}
+.content .attr-name{
+	width:250px; 
+	padding:25px;
+	font-size:13px;
+	background-color: #0B3B24;
+	text-align:center;
+	color:white;
+}
+</style>
+</head>
+<header id="head">
+	<h1>나의 해야할 일들</h1>
+	<form action="">새로운 TODO등록</form>
+</header>
+<body id="body">
+	<div class="content">
+		<div class="todo">
+			<div class="attr-name">TODO</div>
+			<ul>
+				<!--동적 요소 생성 부분-->
+
+			</ul>
+		</div>
+		<div class="doing">
+			<div class="attr-name">DOING</div>
+			<ul>
+					<!--동적 요소 생성 부분-->
+
+			</ul>
+		</div>
+		<div class="done">	<!-- Problem position-->
+			<div class="attr-name">DONE</div>
+			<ul>
+					<!--동적 요소 생성 부분-->
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+	
