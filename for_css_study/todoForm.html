@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style>
+	body{
+		font-family: sans-serif;
+		position:relative;
+	}
+	body .bodychild{
+		position:absolute;
+		width:500px;
+		height:550px;
+		top:50%;
+		left:40%;
+	}
+	.todo input{
+		padding:.5em;
+		width:50%;
+	}
+	.who input{
+		padding:.5em;
+		width:10%;
+	}
+	.todoContent .buttons{
+		display:flex;
+		flex-direction: row;
+		border:0;
+		outline:0;
+	}
+	.buttons #before, #submit, #remove{
+		padding:5px 40px;
+		cursor: pointer;
+	}
+	#submit{
+		margin-left:50px;
+		margin-right:7px;
+		background-color: #5882FA;
+
+	}
+	#remove{
+		background-color: #5882FA;
+
+	}
+
+	#before{
+		text-decoration:underline;
+	}
+
+</style>
+<script type="text/javascript">
+	function clearInput(){
+		var el=document.getElementsByClassName("input-text");
+		for(var i=0;i<el.length;i++){
+			el[i].value="";
+		}
+		var el=document.getElementsByClassName("input-radio");
+		for(var i=0;i<el.length;i++){
+			el[i].checked=false;
+		}
+	}
+
+</script>
+
+
+
+</head>
+<body>
+	<div class="bodychild">
+		<h1>할일 등록</h1>
+	<form class="todoContent">
+		<p class="todo">어떤일인가요?<br><input class="input-text" type="text" name="todo" placeholder="ex. 웹 프로그래밍 공부(24자까지)" maxlength="24"></p>
+		<p class="who">누가 할일인가요?<br><input class="input-text" type="text" name="who" placeholder="홍길동"></p>
+		<p class="priority">우선순위를 선택하세요<br>
+			<label><input class="input-radio" type="radio" name="priority">1순위</label>
+			<label><input class="input-radio" type="radio" name="priority">2순위</label>
+			<label><input class="input-radio" type="radio" name="priority">3순위</label>
+		</p>
+		<div class="buttons">
+			<input id="before" type="submit" value="<이전">
+			<input id="submit" type="submit" value="제출">
+			<button id="remove" onclick="clearInput()">내용지우기</button>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
