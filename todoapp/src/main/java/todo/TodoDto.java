@@ -12,14 +12,14 @@ private String type;
 public TodoDto() {
 
 }
-public TodoDto(long id, String name, String regDate, int sequence, String title, String type) {
+public TodoDto(int id, String title, String name, int sequence, String type, String regDate) {
 	super();
 	this.id = id;
-	this.name = name;
+	this.name = name;//
 	this.regDate = regDate;
-	this.sequence = sequence;
-	this.title = title;
-	this.type = type;
+	this.sequence = sequence;//
+	this.title = title;//
+	this.type = type;//
 }
 public long getId() {
 	return id;
